@@ -13,6 +13,10 @@ const ProdutoSchema = new Schema({
     type: String,
     required: true,
   },
+  id: {
+    type: int,
+    required: true,
+  }
 });
 
 const ProdutoModel = model("Produto", ProdutoSchema);
