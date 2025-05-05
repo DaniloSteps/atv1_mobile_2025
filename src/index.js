@@ -16,7 +16,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Backend API");
 });
-app.use("/api", productoRoute);
+app.use("/api", produtoRoute);
 app.use("/api", clienteRoute);
 
 app.listen(port, () => {
