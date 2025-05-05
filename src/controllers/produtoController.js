@@ -1,12 +1,11 @@
-// controllers/productController.js
-const Product = require("../models/productModel");
+const Produto = require("../models/produtoModel");
 
-const getAllProducts = async (req, res) => {
+const getAllProdutos = async (req, res) => {
   try {
-    const allProducts = await Product.find();
+    const allProdutos = await Produto.find();
     res.status(200).json({
       success: true,
-      products: allProducts,
+      Produtos: allProdutos,
     });
   } catch (error) {
     res.status(500).json({
@@ -16,14 +15,14 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-const createProduct = async (req, res) => {
+const createProduto = async (req, res) => {
   try {
     const { nome, preco, descricao } = req.body;
-    const newProduct = new Product({ nome, preco, descricao});
-    await newProduct.save();
+    const newProduto = new Produto({ nome, preco, descricao});
+    await newProduto.save();
     res.status(201).json({
       success: true,
-      product: newProduct,
+      Produto: newProduto,
     });
   } catch (error) {
     res.status(500).json({
@@ -33,18 +32,18 @@ const createProduct = async (req, res) => {
   }
 };
 
-const updateProduct = async (req, res) => {
+const updateProduto = async (req, res) => {
   try {
     const { id } = req.params;
     const { nome, preco, descricao } = req.body;
-    const updatedProduct = await Product.findByIdAndUpdate(
+    const updatedProduto = await Produto.findByIdAndUpdate(
       id,
       { nome, preco, descricao },
       { new: true }
     );
     res.status(200).json({
       success: true,
-      product: updatedProduct,
+      Produto: updatedProduto,
     });
   } catch (error) {
     res.status(500).json({
@@ -54,11 +53,11 @@ const updateProduct = async (req, res) => {
   }
 };
 
-const deleteProduct = async (req, res) => {
+const deleteProduto = async (req, res) => {
   try {
     const { id } = req.params;
-    const deletedProduct = await Product.findByIdAndDelete(id);
-    if (!deletedProduct) {
+    const deletedProduto = await Produto.findByIdAndDelete(id);
+    if (!deletedProduto) {
       return res.status(404).json({ message: "Produto não encontrado." });
     }
     res.status(200).json({
@@ -74,8 +73,8 @@ const deleteProduct = async (req, res) => {
 };
 
 module.exports = {
-  getAllProducts,
-  createProduct,
-  updateProduct,
-  deleteProduct,
+  getAllProdutos,
+  createProduto,
+  updateProduto,
+  deleteProduto,
 };
