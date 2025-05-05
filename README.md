@@ -5,7 +5,7 @@ API RESTful para gerenciamento de clientes e produtos, seguindo o padrão MVC.
 ---
 
 ## 📁 Estrutura do Projeto (MVC)
-
+```
 src/
 ├── models/ # Camada de Model (Interação com o banco)
 │ ├── clienteModel.js
@@ -17,7 +17,7 @@ src/
 │ ├── clienteRoutes.js
 │ └── produtoRoutes.js
 └── server.js # Ponto de entrada da aplicação
-
+```
 ### Funcionamento do MVC:
 1. **Model**: Responsável pela comunicação com o banco de dados
 2. **Controller**: Processa requisições, aplica regras e retorna respostas
