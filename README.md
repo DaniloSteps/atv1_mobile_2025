@@ -25,7 +25,7 @@ src/
 
 ---
 
-## 🧑💻 Recursos da API
+## Recursos da API
 
 ### 1. Cliente
 Gerencia informações de clientes:
@@ -49,7 +49,7 @@ Gerencia cadastro de produtos:
 }
 ```
 
-## 🌐 Rotas Disponíveis
+## Rotas Disponíveis
 **Clientes**
 
 Método|Endpoint|Ação
