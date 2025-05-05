@@ -66,7 +66,6 @@ DELETE|/cliente/:id|Exclui cliente pelo ID
 Método|Endpoint|Ação
 -|-|-
 GET|/produto|Lista todos os produtos
-GET|/produto/:id|Busca produto por ID
 POST|/produto|Cria novo produto
 PUT|/produto/:id|Atualiza produto pelo ID
 DELETE|/produto/:id|Exclui produto pelo ID
